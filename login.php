@@ -10,15 +10,17 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $username = $_POST["username"];
+        $register = $_POST["register"];
         $password = $_POST["password"];
 
-        $sql = "SELECT * FROM users WHERE (username = '$username' OR email = '$username') AND password = '$password'";
+        $sql = "SELECT * FROM users WHERE (register = '$register' OR email = '$register') AND password = '$password'";
         $result = $conn->query($sql);
 
         if ($result->num_rows == 1) {
             echo "Login successful!";
-            echo "Logged in as:$username";
+            session_start();
+            // set session value to the resister
+            $_SESSION["register"] = $register;
         } else {
             echo "Invalid username/email or password.";
         }

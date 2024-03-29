@@ -10,17 +10,18 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $register = $_POST["register"];
         $name = $_POST["name"];
         $email = $_POST["email"];
         $password = $_POST["password"];
         $confirmPassword = $_POST["confirm_password"];
-        $collegeId = $_POST["college_id"];
+        $area = $_POST["area"];
         $address = $_POST["address"];
-        $username = $_POST["username"];
-        $sql = "INSERT INTO users (name, email, password, college_id, address, username) VALUES ('$name', '$email', '$password', '$collegeId', '$address', '$username')";
-
+        $sql = "INSERT INTO users (register, name, email, password, area, address) VALUES ('$register', '$name', '$email', '$password', '$area', '$address')";
         if ($conn->query($sql) === TRUE) {
             echo "Registration successful!";
+            echo "<br>";
+            echo "Redirecting to login page in 3 seconds...";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
