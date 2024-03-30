@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <title>School Bus Booking System</title>
+    <title>HOME</title>
 </head>
 <body>
     <header class="nav-header">
@@ -21,31 +21,29 @@
             </div>
             <div class="nav-items" id="nav-items">
                 <a href="/" class="active">Home</a>
-                <a href="login.html">Login</a>
-                <a href="register.html">Register</a>
             </div>
             <div class="hamburger">
                 <span id="openHam">&#9776;</span>
                 <span id="closeHam">&#x2716;</span>
             </div>
         </nav>
-       </header>
-       <section id="home">
-        <div class="home-cont">
-            <div class="home-text">
-                <h1>Welcome to <br> School Bus Booking System</h1>
-                <p>Book your school bus tickets online</p>
-                <div class="home-btns">
-                    <a href="login.html" class="btn">Login</a>
-                    <a href="register.html" class="btn">Register</a>
-                </div>
-
-            </div>
-            <div class="home-img">
-                <img src="/assets/bus-image.png" alt="" srcset="">
-            </div>
+        <div class="profile">
+            <a href="">
+                <img src="/assets/profile.jpg" alt="" srcset="">
+            </a>
         </div>
-       </section>
-    <script src="/scripts/script.js"></script>
+       </header>
+
+    LOGGED IN as 
+    <a href="/logout.php">Logout</a>
 </body>
 </html>
+
+<?php
+    if (!isset($_SESSION["register"])) {
+        header("Location: login.php");
+    }
+
+    
+    
+?>

@@ -15,9 +15,9 @@
 
     // if the user is already logged in, redirect them to the home page
     if (isset($_SESSION["register"])) {
-        include "home.html";
+        include "student-home.php";
     }else{
-        include "login.html";
+        include "index.html";
     }
 
 ?>

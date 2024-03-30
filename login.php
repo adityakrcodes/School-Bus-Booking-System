@@ -17,10 +17,9 @@
         $result = $conn->query($sql);
 
         if ($result->num_rows == 1) {
-            echo "Login successful!";
             session_start();
-            // set session value to the resister
             $_SESSION["register"] = $register;
+            include "student-home.php";
         } else {
             echo "Invalid username/email or password.";
         }

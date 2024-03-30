@@ -1,68 +1,82 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Registration Page</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <h1>Registration Page</h1>
-    <form method="POST" action="register.php" onsubmit="return checkForm()">
-        <label for="register">Register Number:</label>
-        <input type="text" name="register" id="register" required><br><br>
+    <header class="nav-header">
+        <nav>
+            <div class="logo-container">
+                <a href="./index.html">
+                    <div class="logo">
+                        <img src="/assets/bus-logo.png" alt="" srcset="">
+                    </div>
+                    <p class="logo-text">
+                        School Bus Booking System
+                    </p>
+                </a>
+            </div>
+            <div class="nav-items" id="nav-items">
+                <a href="/">Home</a>
+                <a href="login.html">Login</a>
+                <a href="register.html" class="active">Register</a>
+            </div>
+            <div class="hamburger">
+                <span id="openHam">&#9776;</span>
+                <span id="closeHam">&#x2716;</span>
+            </div>
+        </nav>
+    </header>
+    <section id="reg-home">
+        <h1 class="reg-head">
+            Register Yourself
+        </h1>
+        <div class="reg-cont">
+            <h2>
+                You are?
+            </h1>
+            <div class="reg-btn-cont">
+                <div class="reg-btn">
+                    <h1 class="reg-id">
+                        Student
+                    </h1>
+                    <img src="/assets/student-icon.jpg" alt="" srcset="">
+                    <p>
+                        Register as a student
+                    </p>
+                    <a href="/register-student.html" class="btn">Register</a>
 
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" required><br><br>
-
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email" required><br><br>
-
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" required><br><br>
-
-        <label for="confirm_password">Confirm Password:</label>
-        <input type="password" name="confirm_password" id="confirm_password" required><br><br>
-
-        <label for="area">Area:</label>
-        <select type="range" name="area" id="area" required>
-            <option value="default" selected disabled>Default</option>
-            <option value="manyata">Manyata</option>
-            <option value="hebbal">Hebbal</option>
-            <option value="yelahanka">Yelahanka</option>
-            <option value="jakkur">Jakkur</option>
-            <option value="kogilu">Kogilu</option>
-            <option value="kempapura">Kempapura</option>
-            <option value="nagavara">Nagavara</option>
-            <option value="hennur">Hennur</option>
-            <option value="kalyan">Kalyan</option>
-            <option value="kammanahalli">Kammanahalli</option>
-            <option value="banaswadi">Banaswadi</option>
-            <option value="horamavu">Horamavu</option>
-            <option value="ramamurthy">Ramamurthy</option>
-            <option value="kasturi">Kasturi</option>
-            <option value="kothanur">Kothanur</option>
-            <option value="kannur">Kannur</option>
-            <option value="hormavu">Hormavu</option>
-            <option value="kalkere">Kalkere</option>
-            <option value="nri">NRI Layout</option>
-            <option value="hrbr">HRBR Layout</option>
-            <option value="kammanahalli">Kammanahalli</option>
-            <option value="kalyan">Kalyan Nagar</option>
-            <option value="banaswadi">Banaswadi</option>
-            <option value="horamavu">Horamavu</option>
-            <option value="ramamurthy">Ramamurthy Nagar</option>
-            <option value="kasturi">Kasturi Nagar</option>
-            <option value="kothanur">Kothanur</option>
-            <option value="hormavu">Hormavu</option>
-            <option value="kalkere">Kalkere</option>
-        </select>
-        <br><br>
-        <label for="address">Address:</label>
-        <textarea name="address" id="address" required></textarea><br><br>
-        <div class="error">
-            <span id="errorText">Error</span>
+                </div>
+                <div class="reg-btn">
+                    <h1 class="reg-id">
+                        Parent
+                    </h1>
+                    <img src="/assets/parent-icon.jpg" alt="" srcset="">
+                    <p>
+                        Register as a parent
+                    </p>
+                    <a href="/register-parent.html" class="btn">Register</a>
+                </div>
+                <div class="reg-btn">
+                    <h1 class="reg-id">
+                        Driver
+                    </h1>
+                    <img src="/assets/driver-icon.jpg" alt="" srcset="">
+                    <p>
+                        Register as a driver.
+                    </p>
+                    <a href="/register-driver.html" class="btn">Register</a>
+                </div>
+            </div>
+            <h3 class="admin-reg">
+                College Administration <br> <a href="/register-admin.html" class="btn">Register as Admin</a>
+            </h3>
         </div>
-        <input type="submit" value="Register">
-    </form>
+    </section>
     <script src="scripts/script.js"></script>
 </body>
 </html>

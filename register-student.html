@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="nav-header">
+        <nav>
+            <div class="logo-container">
+                <a href="./index.html">
+                    <div class="logo">
+                        <img src="/assets/bus-logo.png" alt="" srcset="">
+                    </div>
+                    <p class="logo-text">
+                        School Bus Booking System
+                    </p>
+                </a>
+            </div>
+            <div class="nav-items" id="nav-items">
+                <a href="/" class="active">Home</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <a href="">Admin</a>
+            </div>
+            <div class="hamburger">
+                <span id="openHam">&#9776;</span>
+                <span id="closeHam">&#x2716;</span>
+            </div>
+        </nav>
+       </header>
+       <div class="form-cont">
+        <h1>Student Registration</h1>
+        <form method="POST" action="register.php" onsubmit="return checkForm()">
+            <label for="register">Register Number:</label>
+            <input type="text" name="register" id="register" placeholder="22C01009" required>
+    
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Aditya Kumar" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="adityakrcodes@gmail.com" required>
+    
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Strong Password" required>
+    
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+    
+            <label for="area">Area:</label>
+            <select type="range" name="area" id="area" required>
+                <option value="default" selected disabled>Default</option>
+                <option value="manyata">Manyata</option>
+                <option value="hebbal">Hebbal</option>
+                <option value="yelahanka">Yelahanka</option>
+                <option value="jakkur">Jakkur</option>
+                <option value="kogilu">Kogilu</option>
+                <option value="kempapura">Kempapura</option>
+                <option value="nagavara">Nagavara</option>
+                <option value="hennur">Hennur</option>
+                <option value="kalyan">Kalyan</option>
+                <option value="kammanahalli">Kammanahalli</option>
+                <option value="banaswadi">Banaswadi</option>
+                <option value="horamavu">Horamavu</option>
+                <option value="ramamurthy">Ramamurthy</option>
+                <option value="kasturi">Kasturi</option>
+                <option value="kothanur">Kothanur</option>
+                <option value="kannur">Kannur</option>
+                <option value="hormavu">Hormavu</option>
+                <option value="kalkere">Kalkere</option>
+                <option value="nri">NRI Layout</option>
+                <option value="hrbr">HRBR Layout</option>
+                <option value="kammanahalli">Kammanahalli</option>
+                <option value="kalyan">Kalyan Nagar</option>
+                <option value="banaswadi">Banaswadi</option>
+                <option value="horamavu">Horamavu</option>
+                <option value="ramamurthy">Ramamurthy Nagar</option>
+                <option value="kasturi">Kasturi Nagar</option>
+                <option value="kothanur">Kothanur</option>
+                <option value="hormavu">Hormavu</option>
+                <option value="kalkere">Kalkere</option>
+            </select>
+            <label for="address">Address:</label>
+            <textarea name="address" id="address" placeholder="The place you live" required></textarea>
+            <div class="error">
+                <span id="errorText">Error</span>
+            </div>
+            <input type="submit" value="Register" class="btn">
+            <span class="center">or</span>
+            <a href="/login.html" class="btn">Login</a>
+        </form>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

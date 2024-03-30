@@ -1,17 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login Form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Login Page</title>
 </head>
 <body>
-    <h2>Login Form</h2>
-    <form action="login.php" method="POST">
-        <label for="register">Register Number:</label>
-        <input type="text" id="register" name="register" required><br><br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <input type="submit" value="Login">
-    </form>
-    <a href="/register.html">Register</a>
+    <header class="nav-header">
+        <nav>
+            <div class="logo-container">
+                <a href="./index.html">
+                    <div class="logo">
+                        <img src="/assets/bus-logo.png" alt="" srcset="">
+                    </div>
+                    <p class="logo-text">
+                        School Bus Booking System
+                    </p>
+                </a>
+            </div>
+            <div class="nav-items" id="nav-items">
+                <a href="/">Home</a>
+                <a href="login.html" class="active">Login</a>
+                <a href="register.html">Register</a>
+            </div>
+            <div class="hamburger">
+                <span id="openHam">&#9776;</span>
+                <span id="closeHam">&#x2716;</span>
+            </div>
+        </nav>
+    </header>
+    <section id="reg-home">
+        <h1 class="reg-head">
+            Login
+        </h1>
+        <div class="reg-cont">
+            <div class="reg-btn-cont">
+                <div class="reg-btn">
+                    <h1 class="reg-id">
+                        Student
+                    </h1>
+                    <img src="/assets/student-icon.jpg" alt="" srcset="">
+                    <p>
+                        Login as a student
+                    </p>
+                    <a href="/login-student.html" class="btn">Login</a>
+
+                </div>
+                <div class="reg-btn">
+                    <h1 class="reg-id">
+                        Parent
+                    </h1>
+                    <img src="/assets/parent-icon.jpg" alt="" srcset="">
+                    <p>
+                        Login as a parent
+                    </p>
+                    <a href="/login-parent.html" class="btn">Login</a>
+                </div>
+                <div class="reg-btn">
+                    <h1 class="reg-id">
+                        Driver
+                    </h1>
+                    <img src="/assets/driver-icon.jpg" alt="" srcset="">
+                    <p>
+                        Login as a driver.
+                    </p>
+                    <a href="/login-driver.html" class="btn">Login</a>
+                </div>
+            </div>
+            <h3 class="admin-reg">
+                College Administration <br> <a href="/login-admin.html" class="btn">Login as Admin</a>
+            </h3>
+        </div>
+    </section>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
