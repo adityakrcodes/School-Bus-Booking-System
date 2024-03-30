@@ -13,7 +13,7 @@
         $register = $_POST["register"];
         $password = $_POST["password"];
 
-        $sql = "SELECT * FROM users WHERE (register = '$register' OR email = '$register') AND password = '$password'";
+        $sql = "SELECT * FROM students WHERE (register = '$register' OR email = '$register') AND password = '$password'";
         $result = $conn->query($sql);
 
         if ($result->num_rows == 1) {
