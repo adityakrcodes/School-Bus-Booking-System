@@ -83,41 +83,6 @@
                 </div>
             </div>
         </div>
-        <div class="dashboard">
-            <div class="dashboard-item">
-                <a href="./book-bus.php">
-                    <div class="dashboard-item-icon">
-                        <img src="/assets/book-bus.png" alt="" srcset="">
-                    </div>
-                    <p>Book Bus</p>
-                </a>
-            </div>
-            <div class="dashboard-item">
-                <a href="./view-bus.php">
-                    <div class="dashboard-item-icon">
-                        <img src="/assets/view-bus.png" alt="" srcset="">
-                    </div>
-                    <p>View Bus</p>
-                </a>
-            </div>
-            <div class="dashboard-item">
-                <a href="./view-booking.php">
-                    <div class="dashboard-item-icon">
-                        <img src="/assets/view-booking.png" alt="" srcset="">
-                    </div>
-                    <p>View Booking</p>
-                </a>
-            </div>
-            <div class="dashboard-item">
-                <a href="./logout.php">
-                    <div class="dashboard-item-icon">
-                        <!-- add svg -->
-                        <img src="/assets/logout.svg" alt="" srcset="" class="logout">
-                    </div>
-                    <p>Logout</p>
-                </a>
-            </div>
-        </div>
     </section>
 </body>
 </html>

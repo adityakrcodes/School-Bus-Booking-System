@@ -19,6 +19,12 @@
         if ($result->num_rows == 1) {
             session_start();
             $_SESSION["register"] = $register;
+            // store all the info in session
+            $row = $result->fetch_assoc();
+            $_SESSION["name"] = $row["name"];
+            $_SESSION["email"] = $row["email"];
+            $_SESSION["area"] = $row["area"];
+            $_SESSION["address"] = $row["address"];
             include "student-home.php";
         } else {
             echo "Invalid username/email or password.";

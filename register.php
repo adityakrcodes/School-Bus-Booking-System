@@ -19,9 +19,7 @@
         $address = $_POST["address"];
         $sql = "INSERT INTO users (register, name, email, password, area, address) VALUES ('$register', '$name', '$email', '$password', '$area', '$address')";
         if ($conn->query($sql) === TRUE) {
-            echo "Registration successful!";
-            echo "<br>";
-            echo "Redirecting to login page in 3 seconds...";
+            include "registered.html";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }

@@ -1,0 +1,73 @@
+.profile > a > img{
+    width: 30px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+}
+
+.nav-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #121212;
+    color: #ffffff;
+    gap: 10px;
+}
+
+.user-info{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    background-color: #121212;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.profile-img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;   
+}
+.user-info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.user-info-item > p{
+    text-align: left;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.user-info-item > p > span{
+    font-weight: normal;
+}
+
+.profile-img-cont{
+    margin: 0 auto;
+}
+
+.dashboard{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.dashboard-item{
+    text-align: center;
+}
+
+.dashboard-item-icon > img{
+    width: 100px;
+    height: 100px;
+}
+
+.dashboard-item-icon > .logout{
+    filter: invert(1);
+}

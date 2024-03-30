@@ -38,6 +38,12 @@ a{
     display: none;
 }
 
+.web{
+    display: block;
+}
+.mob{
+    display: none;
+}
 
 /* Navigation */ 
 
@@ -134,6 +140,13 @@ a{
         height: calc(100vh - 58px);
         padding-top: 60px;
         gap: 10vh;
+    }
+
+    .web{
+        display: none;
+    }
+    .mob{
+        display: block;
     }
 }
 
@@ -299,6 +312,33 @@ form > {
     color: #ffffff;
 }
 
+/* Registered page styling */
+
+.registered{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    height: 80vh;
+    padding: 20px;
+}
+
+.registered > h1{
+    font-size: 7vw;
+    text-align: center;
+    padding: 20px;
+}
+
+.registered > p{
+    font-size: 4vw;
+    text-align: center;
+    padding: 20px;
+}
+
+.registered > a{
+    text-align: center;
+}
+
 
 /* Reponsiveness */
 
@@ -332,6 +372,34 @@ form > {
     .reg-btn-cont{
         flex-wrap: wrap;
         flex-direction: row;
+    }
+
+    .web{
+        display: block;
+    }
+    .mob{
+        display: none;
+    }
+
+    .registered{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        height: 100vh;
+        width: 60vw;
+    }
+
+    .registered > h1{
+        font-size: 3rem;
+    }
+
+    .registered > p{
+        font-size: 2rem;
+    }
+
+    .registered > a{
+        font-size: 1.5rem;
     }
 
 }
