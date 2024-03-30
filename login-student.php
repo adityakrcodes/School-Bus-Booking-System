@@ -25,6 +25,7 @@
             $_SESSION["email"] = $row["email"];
             $_SESSION["area"] = $row["area"];
             $_SESSION["address"] = $row["address"];
+            $_SESSION["user"] = $row["student"];
             include "student-home.php";
         } else {
             echo "Invalid username/email or password.";
