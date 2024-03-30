@@ -17,7 +17,7 @@
         $confirmPassword = $_POST["confirm_password"];
         $area = $_POST["area"];
         $address = $_POST["address"];
-        $sql = "INSERT INTO users (register, name, email, password, area, address) VALUES ('$register', '$name', '$email', '$password', '$area', '$address')";
+        $sql = "INSERT INTO students (register, name, email, password, area, address) VALUES ('$register', '$name', '$email', '$password', '$area', '$address')";
         if ($conn->query($sql) === TRUE) {
             include "registered.html";
         } else {
