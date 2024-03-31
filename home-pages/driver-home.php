@@ -11,6 +11,11 @@
 <?php
     $name = $_SESSION["name"];
     $email = $_SESSION["email"];
+    $age = $_SESSION["age"];
+    $address = $_SESSION["address"];
+    $phone = $_SESSION["phone"];
+    $driving_licence = $_SESSION["driving_licence"];
+
 ?>
     <header class="nav-header">
         <nav>
@@ -63,9 +68,30 @@
                     </div>
                     <div class="user-info-item">
                         <p>
+                            Age: <span><?php echo $age; ?></span>
+                        </p>
+                    </div>
+                    <div class="user-info-item">
+                        <p>
                             Email: <span><?php echo $email; ?></span>
                         </p>
                     </div>
+                    <div class="user-info-item">
+                        <p>
+                            Address: <span><?php echo $address; ?></span>
+                        </p>
+                    </div>
+                    <div class="user-info-item">
+                        <p>
+                            Phone: <span><?php echo $phone; ?></span>
+                        </p>
+                    </div>
+                    <div class="user-info-item">
+                        <p>
+                            Driving License: <span><?php echo $driving_licence; ?></span>
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </div>

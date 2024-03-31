@@ -21,6 +21,10 @@
             $row = $result->fetch_assoc();
             $_SESSION["name"] = $row["name"];
             $_SESSION["email"] = $row["email"];
+            $_SESSION["age"] = $row["age"];
+            $_SESSION["address"] = $row["address"];
+            $_SESSION["phone"] = $row["phone"];
+            $_SESSION["driving_licence"] = $row["driving_licence"];
             $_SESSION["user"] = "driver";
             include "../home-pages/driver-home.php";
         } else {
