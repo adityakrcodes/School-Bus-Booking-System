@@ -47,48 +47,32 @@
     <section id="home-hero">
         <div class="home-hero-container">
             <div class="user-info">
-                <h2>Student Home</h2>
-                <div class="user-info-container">
-                    <div class="user-info-item profile-img-cont">
-                        <?php 
-                            if (isset($_SESSION["profile"])) {
-                                $profile = $_SESSION["profile"];
-                            }else{
-                                $profile = "/assets/profile.jpg";
-                            }
-                            echo "<img src='$profile' alt='' srcset='' class='profile-img'>";
-                        ?>
-                    </div>
-                    <div class="user-info-item">
-                        <p>
-                            Name: <span><?php echo $name; ?></span>
-                        </p>
-                    </div>
-                    <div class="user-info-item">
-                        <p>
-                            Email: <span><?php echo $email; ?></span>
-                        </p>
-                    </div>
-                    <div class="user-info-item">
-                        <p>
-                            Area: <span><?php echo $area; ?></span>
-                        </p>
-                    </div>
-                    <div class="user-info-item">
-                        <p>
-                            Address: <span><?php echo $address; ?></span>
-                        </p>
-                    </div>
-                </div>
+                <h2>
+                    Welcome, <?php echo $name; ?>
+                </h2>
+            </div>
+            
+            <div class="bus-booking-cont">
+                <h2>Book a bus</h2>
+                <form action="" method="post">
+                </form>
             </div>
         </div>
         <div class="dashboard">
             <div class="dashboard-item">
-                <a href="../booking-system/book-bus.php">
+                <a href="../home-pages/student-home.php">
                     <div class="dashboard-item-icon">
                         <img src="/assets/book-bus.png" alt="" srcset="">
                     </div>
-                    <p>Book Bus</p>
+                    <p>Your dashboard</p>
+                </a>
+            </div>
+            <div class="dashboard-item">
+                <a href="./view-bus.php">
+                    <div class="dashboard-item-icon">
+                        <img src="/assets/view-bus.png" alt="" srcset="">
+                    </div>
+                    <p>View Bus</p>
                 </a>
             </div>
             <div class="dashboard-item">
