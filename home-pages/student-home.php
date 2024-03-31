@@ -3,28 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <title>Parents Dashboard</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <title>HOME</title>
 </head>
 <body>
 <?php
-    $parent_name = $_SESSION["parent_name"];
-    $parent_email = $_SESSION["email"];
-    $register = $_SESSION["register"];
-    $sql = "SELECT * FROM students WHERE register = '$register'";
-    $result = $conn->query($sql);
-    $row = $result->fetch_assoc();
-    $name = $row["name"];
-    $email = $row["email"];
-    $area = $row["area"];
-    $address = $row["address"];
-
+    session_start();
+    $name = $_SESSION["name"];
+    $email = $_SESSION["email"];
+    $area = $_SESSION["area"];
+    $address = $_SESSION["address"];
 ?>
     <header class="nav-header">
         <nav>
             <div class="logo-container">
-                <a href="./index.php">
+                <a href="/">
                     <div class="logo">
                         <img src="/assets/bus-logo.png" alt="" srcset="">
                     </div>
@@ -53,32 +47,7 @@
     <section id="home-hero">
         <div class="home-hero-container">
             <div class="user-info">
-                <h2>Parents Dashboard</h2>
-                <div class="user-info-container">
-                    <div class="user-info-item profile-img-cont">
-                        <?php 
-                            if (isset($_SESSION["profile"])) {
-                                $profile = $_SESSION["profile"];
-                            }else{
-                                $profile = "/assets/profile.jpg";
-                            }
-                            echo "<img src='$profile' alt='' srcset='' class='profile-img'>";
-                        ?>
-                    </div>
-                    <div class="user-info-item">
-                        <p>
-                            Name: <span><?php echo $parent_name; ?></span>
-                        </p>
-                    </div>
-                    <div class="user-info-item">
-                        <p>
-                            Email: <span><?php echo $parent_email; ?></span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="user-info">
-                <h2>Student Information</h2>
+                <h2>Student Home</h2>
                 <div class="user-info-container">
                     <div class="user-info-item profile-img-cont">
                         <?php 
@@ -115,19 +84,11 @@
         </div>
         <div class="dashboard">
             <div class="dashboard-item">
-                <a href="./book-bus.php">
+                <a href="../booking-system/book-bus.php">
                     <div class="dashboard-item-icon">
                         <img src="/assets/book-bus.png" alt="" srcset="">
                     </div>
                     <p>Book Bus</p>
-                </a>
-            </div>
-            <div class="dashboard-item">
-                <a href="./view-bus.php">
-                    <div class="dashboard-item-icon">
-                        <img src="/assets/view-bus.png" alt="" srcset="">
-                    </div>
-                    <p>View Bus</p>
                 </a>
             </div>
             <div class="dashboard-item">
@@ -139,7 +100,7 @@
                 </a>
             </div>
             <div class="dashboard-item">
-                <a href="./logout.php">
+                <a href="../logout.php">
                     <div class="dashboard-item-icon">
                         <!-- add svg -->
                         <img src="/assets/logout.svg" alt="" srcset="" class="logout">
@@ -149,6 +110,7 @@
             </div>
         </div>
     </section>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>
 
@@ -164,7 +126,7 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    if (!isset($_SESSION["email"])) {
+    if (!isset($_SESSION["register"])) {
         header("Location: login.php");
     }
 ?>

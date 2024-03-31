@@ -15,13 +15,13 @@
 
     // if the user is already logged in, redirect them to the home page
     if (isset($_SESSION["register"]) && $_SESSION["user"] == "parent") {
-        include "parent-home.php";
+        include "home-pages/parent-home.php";
     }else if (isset($_SESSION["register"]) && $_SESSION["user"] == "student") {
-        include "student-home.php";
+        include "home-pages/student-home.php";
     }else if (isset($_SESSION["email"]) && $_SESSION["user"] == "driver") {
-        include "driver-home.php";
+        include "home-pages/driver-home.php";
     }else if (isset($_SESSION["email"]) && $_SESSION["user"] == "admin") {
-        include "admin-home.php";
+        include "home-pages/admin-home.php";
     }else{
         include "index.html";
     }

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/home.css">
     <title>Admin Dashboard</title>
 </head>
 <body>
@@ -120,7 +120,7 @@
                 </a>
             </div>
             <div class="dashboard-item">
-                <a href="./logout.php">
+                <a href="../logout.php">
                     <div class="dashboard-item-icon">
                         <img src="/assets/logout.svg" alt="" srcset="" class="logout">
                     </div>

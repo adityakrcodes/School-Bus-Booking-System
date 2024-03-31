@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Parents Registration</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Admin Registration</title>
 </head>
 <body>
     <header class="nav-header">
@@ -25,8 +24,8 @@
             </div>
             <div class="nav-items" id="nav-items">
                 <a href="/">Home</a>
-                <a href="login.html">Login</a>
-                <a href="register.html" class="active">Register</a>
+                <a href="/login.html">Login</a>
+                <a href="/register.html" class="active">Register</a>
                 <a href="">Admin</a>
             </div>
             <div class="hamburger">
@@ -36,25 +35,18 @@
         </nav>
        </header>
        <div class="form-cont">
-        <h1>Parents Registration</h1>
-        <form method="POST" action="register-parent.php" onsubmit="return checkForm()">
-            <label for="register">Students Register Number:</label>
-            <input type="text" name="register" id="register" placeholder="22C01009" required>
-    
+        <h1>Admin Registration</h1>
+        <form method="POST" action="/registration-scripts/register-admin.php" onsubmit="return checkAdminForm()">    
             <label for="name">Name:</label>
             <input type="text" name="name" id="name" placeholder="Aditya Kumar" required>
-
-            <label for="relation">Relationship with student:</label>
-            <select name="relationship" id="relationship" required>
-                <option value="Select" selected disabled>Select</option>
-                <option value="Father">Father</option>
-                <option value="Mother">Mother</option>
-                <option value="Guardian">Guardian</option>
-            </select>
     
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" placeholder="adityakrcodes@gmail.com" required>
     
+            <!-- input for passkey -->
+            <label for="passkey">Passkey:</label>
+            <input type="password" name="passkey" id="passkey" placeholder="Passkey" required>
+
             <label for="password">Password:</label>
             <input type="password" name="password" id="password" placeholder="Strong Password" required>
     
@@ -69,6 +61,7 @@
             <a href="/login.html" class="btn">Login</a>
         </form>
     </div>
-    <script src="scripts/script.js"></script>
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/adminauth.js"></script>
 </body>
 </html>

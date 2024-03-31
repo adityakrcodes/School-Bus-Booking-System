@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/home.css">
     <title>HOME</title>
 </head>
 <body>
 <?php
+    session_start();
     $name = $_SESSION["name"];
     $email = $_SESSION["email"];
     $area = $_SESSION["area"];
@@ -17,7 +18,7 @@
     <header class="nav-header">
         <nav>
             <div class="logo-container">
-                <a href="./index.php">
+                <a href="/">
                     <div class="logo">
                         <img src="/assets/bus-logo.png" alt="" srcset="">
                     </div>
@@ -46,39 +47,50 @@
     <section id="home-hero">
         <div class="home-hero-container">
             <div class="user-info">
-                <h2>Student Home</h2>
-                <div class="user-info-container">
-                    <div class="user-info-item profile-img-cont">
-                        <?php 
-                            if (isset($_SESSION["profile"])) {
-                                $profile = $_SESSION["profile"];
-                            }else{
-                                $profile = "/assets/profile.jpg";
-                            }
-                            echo "<img src='$profile' alt='' srcset='' class='profile-img'>";
-                        ?>
+                <h2>
+                    Welcome, <?php echo $name; ?>
+                </h2>
+            </div>
+            
+            <div class="bus-booking-cont">
+                <h2>Book a bus</h2>
+                <form action="" method="post">
+                </form>
+            </div>
+        </div>
+        <div class="dashboard">
+            <div class="dashboard-item">
+                <a href="../home-pages/student-home.php">
+                    <div class="dashboard-item-icon">
+                        <img src="/assets/book-bus.png" alt="" srcset="">
                     </div>
-                    <div class="user-info-item">
-                        <p>
-                            Name: <span><?php echo $name; ?></span>
-                        </p>
+                    <p>Your dashboard</p>
+                </a>
+            </div>
+            <div class="dashboard-item">
+                <a href="./view-bus.php">
+                    <div class="dashboard-item-icon">
+                        <img src="/assets/view-bus.png" alt="" srcset="">
                     </div>
-                    <div class="user-info-item">
-                        <p>
-                            Email: <span><?php echo $email; ?></span>
-                        </p>
+                    <p>View Bus</p>
+                </a>
+            </div>
+            <div class="dashboard-item">
+                <a href="./view-booking.php">
+                    <div class="dashboard-item-icon">
+                        <img src="/assets/view-booking.png" alt="" srcset="">
                     </div>
-                    <div class="user-info-item">
-                        <p>
-                            Area: <span><?php echo $area; ?></span>
-                        </p>
+                    <p>View Booking</p>
+                </a>
+            </div>
+            <div class="dashboard-item">
+                <a href="../logout.php">
+                    <div class="dashboard-item-icon">
+                        <!-- add svg -->
+                        <img src="/assets/logout.svg" alt="" srcset="" class="logout">
                     </div>
-                    <div class="user-info-item">
-                        <p>
-                            Address: <span><?php echo $address; ?></span>
-                        </p>
-                    </div>
-                </div>
+                    <p>Logout</p>
+                </a>
             </div>
         </div>
     </section>

@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css">
     <title>Registration Page</title>
-    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
     <header class="nav-header">
@@ -25,9 +24,8 @@
             </div>
             <div class="nav-items" id="nav-items">
                 <a href="/" class="active">Home</a>
-                <a href="login.html">Login</a>
-                <a href="register.html">Register</a>
-                <a href="">Admin</a>
+                <a href="/login.html">Login</a>
+                <a href="/register.html">Register</a>
             </div>
             <div class="hamburger">
                 <span id="openHam">&#9776;</span>
@@ -37,7 +35,7 @@
        </header>
        <div class="form-cont">
         <h1>Student Registration</h1>
-        <form method="POST" action="register-student.php" onsubmit="return checkForm()">
+        <form method="POST" action="/registration-scripts/register-student.php" onsubmit="return checkForm()">
             <label for="register">Register Number:</label>
             <input type="text" name="register" id="register" placeholder="22C01009" required>
     
@@ -96,6 +94,6 @@
             <a href="/login.html" class="btn">Login</a>
         </form>
     </div>
-    <script src="scripts/script.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>

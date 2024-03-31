@@ -10,21 +10,25 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $email = $_POST["email"];
+        $register = $_POST["register"];
         $password = $_POST["password"];
 
-        $sql = "SELECT * FROM admins WHERE (email = '$email') AND password = '$password'";
+        $sql = "SELECT * FROM students WHERE (register = '$register' OR email = '$register') AND password = '$password'";
         $result = $conn->query($sql);
 
         if ($result->num_rows == 1) {
             session_start();
+            $_SESSION["register"] = $register;
+            // store all the info in session
             $row = $result->fetch_assoc();
             $_SESSION["name"] = $row["name"];
             $_SESSION["email"] = $row["email"];
-            $_SESSION["user"] = "admin";
-            include "admin-home.php";
+            $_SESSION["area"] = $row["area"];
+            $_SESSION["address"] = $row["address"];
+            $_SESSION["user"] = "student";
+            include "../home-pages/student-home.php";
         } else {
-            include "invalid-pass.html";
+            include "../invalid-pass.html";
         }
     }
 ?>

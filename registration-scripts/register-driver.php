@@ -10,7 +10,6 @@
     }
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // write for driver registration with the following fields name, age, address, phone, email, driving licence, password
         $name = $_POST['name'];
         $age = $_POST['age'];
         $address = $_POST['address'];
