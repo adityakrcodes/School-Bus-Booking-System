@@ -67,7 +67,3 @@
     width: 100px;
     height: 100px;
 }
-
-.dashboard-item-icon > .logout{
-    filter: invert(1);
-}
