@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css">
     <title>Driver Registration</title>
 </head>
 <body>
     <header class="nav-header">
         <nav>
             <div class="logo-container">
-                <a href="./index.html">
+                <a href="/index.html">
                     <div class="logo">
                         <img src="/assets/bus-logo.png" alt="" srcset="">
                     </div>
@@ -24,9 +24,8 @@
             </div>
             <div class="nav-items" id="nav-items">
                 <a href="/">Home</a>
-                <a href="login.html">Login</a>
-                <a href="register.html" class="active">Register</a>
-                <a href="">Admin</a>
+                <a href="/login.html">Login</a>
+                <a href="/register.html" class="active">Register</a>
             </div>
             <div class="hamburger">
                 <span id="openHam">&#9776;</span>
@@ -36,7 +35,7 @@
        </header>
        <div class="form-cont">
         <h1>Driver Registration</h1>
-        <form method="POST" action="register-driver.php" onsubmit="return checkForm()">
+        <form method="POST" action="/registration-scripts/register-driver.php" onsubmit="return checkForm()">
             <label for="name">Name:</label>
             <input type="text" name="name" id="name" placeholder="Enter your name" required>
 
@@ -69,6 +68,6 @@
             <a href="/login-driver.html" class="btn">Login</a>
         </form>
     </div>
-    <script src="scripts/script.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>
