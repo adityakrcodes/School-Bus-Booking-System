@@ -412,6 +412,15 @@ form > {
         display: none;
     }
 
+    .form-cont{
+        width: 60vw;
+        margin: 0 auto;
+        background-color: #121212;
+        padding: 20px;
+        border-radius: 20px;
+        margin-top: 10vh;
+    }
+
     .registered{
         display: flex;
         align-items: center;
