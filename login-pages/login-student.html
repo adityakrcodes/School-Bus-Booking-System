@@ -3,8 +3,8 @@
 <head>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Login Form</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Student Login</title>
 </head>
 <body>
     <header class="nav-header">
@@ -24,8 +24,8 @@
             </div>
             <div class="nav-items" id="nav-items">
                 <a href="/">Home</a>
-                <a href="login.html" class="active">Login</a>
-                <a href="register.html">Register</a>
+                <a href="/login.html" class="active">Login</a>
+                <a href="/register.html">Register</a>
             </div>
             <div class="hamburger">
                 <span id="openHam">&#9776;</span>
@@ -35,16 +35,16 @@
     </header>
     <div class="form-cont">
         <h1>Student Login</h1>
-        <form action="/login-student.php" method="POST">
+        <form action="/login-scripts/login-student.php" method="POST">
             <label for="register">Register Number or E-mail:</label>
             <input type="text" id="register" name="register" required>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             <input type="submit" value="Login" class="btn">
             <span class="center">or</span>
-            <a href="register-student.html" class="btn">Register</a>
+            <a href="/registeration-pages/register-student.html" class="btn">Register</a>
         </form>
     </div>
-    <script src="scripts/script.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/home.css">
     <title>HOME</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
     <header class="nav-header">
         <nav>
             <div class="logo-container">
-                <a href="./index.php">
+                <a href="/">
                     <div class="logo">
                         <img src="/assets/bus-logo.png" alt="" srcset="">
                     </div>
