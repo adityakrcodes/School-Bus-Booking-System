@@ -15,7 +15,7 @@
 
     // if the user is already logged in, redirect them to the home page
     if (isset($_SESSION["register"]) && $_SESSION["user"] == "parent") {
-        include "parent-home.php";
+        include "home-pages/parent-home.php";
     }else if (isset($_SESSION["register"]) && $_SESSION["user"] == "student") {
         include "home-pages/student-home.php";
     }else if (isset($_SESSION["email"]) && $_SESSION["user"] == "driver") {

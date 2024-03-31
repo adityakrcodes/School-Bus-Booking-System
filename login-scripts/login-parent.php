@@ -24,7 +24,7 @@
             $_SESSION["email"] = $row["email"];
             $_SESSION["register"] = $row["register"];
             $_SESSION["user"] = "parent";
-            include "parent-home.php";
+            include "../home-pages/parent-home.php";
         } else {
             echo "Invalid username/email or password.";
         }
