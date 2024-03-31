@@ -19,17 +19,14 @@
     $sql = "SELECT * FROM drivers";
     $result = $conn->query($sql);
     $drivers = $result->num_rows;
-    $routes = 0;
-    $buses = 0;
-    // TODO - Add routes and buses table to database
 
-    // $sql = "SELECT * FROM routes";
-    // $result = $conn->query($sql);
-    // $routes = $result->num_rows;
+    $sql = "SELECT * FROM routes";
+    $result = $conn->query($sql);
+    $routes = $result->num_rows;
 
-    // $sql = "SELECT * FROM buses";
-    // $result = $conn->query($sql);
-    // $buses = $result->num_rows;
+    $sql = "SELECT * FROM bus_info";
+    $result = $conn->query($sql);
+    $buses = $result->num_rows;
     
 ?>
     <header class="nav-header">
