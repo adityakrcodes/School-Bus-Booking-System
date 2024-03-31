@@ -24,7 +24,7 @@
             $_SESSION["user"] = "admin";
             include "admin-home.php";
         } else {
-            echo "Invalid username/email or password.";
+            include "invalid-pass.html";
         }
     }
 ?>
