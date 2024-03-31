@@ -421,6 +421,11 @@ form > {
         margin-top: 10vh;
     }
 
+    .home-hero-container{
+        width: 60vw;
+        margin: 0 auto;
+    }
+
     .registered{
         display: flex;
         align-items: center;
