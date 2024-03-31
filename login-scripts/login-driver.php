@@ -24,7 +24,7 @@
             $_SESSION["user"] = "driver";
             include "../home-pages/driver-home.php";
         } else {
-            echo "Invalid username/email or password.";
+            include "../invalid-pass.html";
         }
     }
 ?>

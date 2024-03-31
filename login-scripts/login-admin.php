@@ -25,7 +25,7 @@
             include "../home-pages/admin-home.php";
 
         } else {
-            include "invalid-pass.html";
+            include "../invalid-pass.html";
         }
     }
 ?>

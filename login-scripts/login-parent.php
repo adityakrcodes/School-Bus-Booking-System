@@ -26,7 +26,7 @@
             $_SESSION["user"] = "parent";
             include "../home-pages/parent-home.php";
         } else {
-            echo "Invalid username/email or password.";
+            include "../invalid-pass.html";
         }
     }
 ?>

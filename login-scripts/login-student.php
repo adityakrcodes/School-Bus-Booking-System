@@ -28,7 +28,7 @@
             $_SESSION["user"] = "student";
             include "../home-pages/student-home.php";
         } else {
-            echo "Invalid username/email or password.";
+            include "../invalid-pass.html";
         }
     }
 ?>

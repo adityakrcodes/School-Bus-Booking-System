@@ -3,14 +3,14 @@
 <head>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css">
     <title>Invalid Password</title>
 </head>
 <body>
     <header class="nav-header">
         <nav>
             <div class="logo-container">
-                <a href="./index.html">
+                <a href="/">
                     <div class="logo">
                         <img src="/assets/bus-logo.png" alt="" srcset="">
                     </div>
@@ -36,16 +36,16 @@
     <div class="inv-cont">
         <h1>Invalid Password</h1>
         <p>The password you entered is incorrect. Please try again.</p>
-        <!-- redirecting you back -->
-        <p>Redirecting you back to the login page, if you are not redirected automatically click </p>
         <br>
+        <p>Redirecting you back to the login page in 3 seconds, if you are not redirected automatically click <a onclick="history.back()">here</a></p>
+        <p>OR</p>
         <a class="btn" onclick="history.back()">Go Back</a>
     </div>
     <script>
         setTimeout(() => {
             history.back();
-        }, 5000);
+        }, 3000);
         </script>
-    <script src="scripts/script.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>
