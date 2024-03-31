@@ -22,7 +22,7 @@
             $_SESSION["name"] = $row["name"];
             $_SESSION["email"] = $row["email"];
             $_SESSION["user"] = "driver";
-            include "driver-home.php";
+            include "../home-pages/driver-home.php";
         } else {
             echo "Invalid username/email or password.";
         }
