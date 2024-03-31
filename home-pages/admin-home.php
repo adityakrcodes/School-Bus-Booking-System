@@ -120,7 +120,7 @@
                 </a>
             </div>
             <div class="dashboard-item">
-                <a href="./logout.php">
+                <a href="../logout.php">
                     <div class="dashboard-item-icon">
                         <img src="/assets/logout.svg" alt="" srcset="" class="logout">
                     </div>
