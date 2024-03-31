@@ -5,28 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/home.css">
-    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/styles/admin.css">
+    <title>Admin Dashboard | Students</title>
 </head>
 <body>
 <?php
+    if (!isset($_SESSION["email"])) {
+        session_start();
+    }
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "database";
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    if (!isset($_SESSION["email"])) {
+        header("Location: login.php");
+    }
     $name = $_SESSION["name"];
     $email = $_SESSION["email"];
 
     $sql = "SELECT * FROM students";
     $result = $conn->query($sql);
     $students = $result->num_rows;
-
-    $sql = "SELECT * FROM drivers";
-    $result = $conn->query($sql);
-    $drivers = $result->num_rows;
-
-    $sql = "SELECT * FROM routes";
-    $result = $conn->query($sql);
-    $routes = $result->num_rows;
-
-    $sql = "SELECT * FROM bus_info";
-    $result = $conn->query($sql);
-    $buses = $result->num_rows;
+    $register = $result->fetch_assoc()["register"];
     
 ?>
     <header class="nav-header">
@@ -46,7 +52,7 @@
             </div>
             <div class="nav-items" id="nav-items">
                 <a href="/" class="active">Home</a>
-                <a href="./admin-students.php">Students</a>
+                <a href="./admin-students.php" class="active">Students</a>
                 <a href="./admin-drivers.php">Drivers</a>
                 <a href="./admin-routes.php">Routes</a>
                 <a href="./admin-buses.php">Buses</a>
@@ -85,67 +91,43 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="dashboard">
-            <div class="dashboard-item">
-                <a href="/admin-dashboard/students.php">
-                    <div class="dashboard-item-icon">
-                        <img src="/assets/student-icon-stroke.png" alt="" srcset="">
+            <div class="user-info">
+                <h2>Students</h2>
+                <div class="user-info-container">
+                    <div class="user-info-item">
+                        <p>
+                            Total students: <span><?php echo $students; ?></span>
+                        </p>
                     </div>
-                    <p>Students - <span><?php echo $students; ?></span></p>
-                </a>
-            </div>
-            <div class="dashboard-item">
-                <a href="/admin-dashboard/drivers.php">
-                    <div class="dashboard-item-icon">
-                        <img src="/assets/driver-icon-stroke.png" alt="" srcset="">
+                    <div class="admin-info-cont">
+                    <?php
+                    $sql = "SELECT register, name, email, password, area, address, timestamp FROM students";
+                    $result = $conn->query($sql);
+                    if ($result->num_rows > 0) {
+                        while($row = $result->fetch_assoc()) {
+                            echo "<div class='admin-info-card'>";
+                            echo "<h2>" . $row["name"] . "</h2>";
+                            echo "<p><strong>Register:</strong> " . $row["register"] . "</p>";
+                            echo "<p><strong>Email:</strong> " . $row["email"] . "</p>";
+                            echo "<p><strong>Area:</strong> " . $row["area"] . "</p>";
+                            echo "<p><strong>Address:</strong> " . $row["address"] . "</p>";
+                            echo "<p><strong>Creation Time:</strong> " . $row["timestamp"] . "</p>";
+                            echo "<br>";
+                            echo "<a class='btn' href='./admin-edit-student.php?register=" . $row["register"] . " '>Edit</a>";
+                            echo "</div>";
+                        }
+                    } else {
+                        echo "0 results";
+                    }
+
+                    $conn->close();
+                    ?>
                     </div>
-                    <p>Drivers - <span><?php echo $drivers; ?></span></p>
-                </a>
+                </div>
             </div>
-            <div class="dashboard-item">
-                <a href="/admin-dashboard/routes.php">
-                    <div class="dashboard-item-icon">
-                        <img src="/assets/route.png" alt="" srcset="">
-                    </div>
-                    <p>Routes - <span><?php echo $routes; ?></span></p>
-                </a>
-            </div>
-            <div class="dashboard-item">
-                <a href="/admin-dashboard/buses.php">
-                    <div class="dashboard-item-icon">
-                        <img src="/assets/view-bus.png" alt="" srcset="">
-                    </div>
-                    <p>Buses - <span><?php echo $buses; ?></span></p>
-                </a>
-            </div>
-            <div class="dashboard-item">
-                <a href="../logout.php">
-                    <div class="dashboard-item-icon">
-                        <img src="/assets/logout.svg" alt="" srcset="" class="logout">
-                    </div>
-                    <p>Logout</p>
-                </a>
-            </div>
+\
         </div>
     </section>
     <script src="/scripts/script.js"></script>
 </body>
 </html>
-
-<?php
-
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "database";
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    if (!isset($_SESSION["email"])) {
-        header("Location: login.php");
-    }
-?>
