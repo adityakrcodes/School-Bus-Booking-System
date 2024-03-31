@@ -8,7 +8,8 @@ CREATE TABLE Student (
   Email varchar(40) UNIQUE,
   password varchar(30),
   area varchar(40),
-  address varchar(250)
+  address varchar(250),
+  timestamp(16) NOT NULL DEFAULT CURRENT_TIMESTAMP(16) ON UPDATE CURRENT_TIMESTAMP(16)
 );
 
 -- Creating a 'Parent' table
@@ -18,6 +19,7 @@ CREATE TABLE Parent (
   Email VARCHAR(40) NOT NULL,
   password VARCHAR(15),
   relationship VARCHAR(20),
+  timestamp(16) NOT NULL DEFAULT CURRENT_TIMESTAMP(16) ON UPDATE CURRENT_TIMESTAMP(16)
 );
 
 -- Creating a 'Route' table
@@ -37,4 +39,5 @@ CREATE TABLE Driver (
   address varchar(250),
   DrivingLicense varchar(30),
   password  varchar(30),
+  timestamp(16) NOT NULL DEFAULT CURRENT_TIMESTAMP(16) ON UPDATE CURRENT_TIMESTAMP(16)
 );
