@@ -9,7 +9,10 @@
 </head>
 <body>
 <?php
-    session_start();
+    // check if session is set and assign session variables to variables
+    if (!isset($_SESSION["register"])) {
+        session_start();
+    }
     $name = $_SESSION["name"];
     $email = $_SESSION["email"];
     $area = $_SESSION["area"];
