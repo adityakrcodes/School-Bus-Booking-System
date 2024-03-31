@@ -19,7 +19,7 @@
     }else if (isset($_SESSION["register"]) && $_SESSION["user"] == "student") {
         include "home-pages/student-home.php";
     }else if (isset($_SESSION["email"]) && $_SESSION["user"] == "driver") {
-        include "driver-home.php";
+        include "home-pages/driver-home.php";
     }else if (isset($_SESSION["email"]) && $_SESSION["user"] == "admin") {
         include "home-pages/admin-home.php";
     }else{
