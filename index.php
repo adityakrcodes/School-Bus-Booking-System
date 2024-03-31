@@ -18,6 +18,10 @@
         include "parent-home.php";
     }else if (isset($_SESSION["register"]) && $_SESSION["user"] == "student") {
         include "student-home.php";
+    }else if (isset($_SESSION["email"]) && $_SESSION["user"] == "driver") {
+        include "driver-home.php";
+    }else if (isset($_SESSION["email"]) && $_SESSION["user"] == "admin") {
+        include "admin-home.php";
     }else{
         include "index.html";
     }
