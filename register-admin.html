@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Admin Registration</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header class="nav-header">
+        <nav>
+            <div class="logo-container">
+                <a href="./index.html">
+                    <div class="logo">
+                        <img src="/assets/bus-logo.png" alt="" srcset="">
+                    </div>
+                    <p class="logo-text web">
+                        School Bus Booking System
+                    </p>
+                    <p class="logo-text mob">
+                        SBBS
+                    </p>
+                </a>
+            </div>
+            <div class="nav-items" id="nav-items">
+                <a href="/">Home</a>
+                <a href="login.html">Login</a>
+                <a href="register.html" class="active">Register</a>
+                <a href="">Admin</a>
+            </div>
+            <div class="hamburger">
+                <span id="openHam">&#9776;</span>
+                <span id="closeHam">&#x2716;</span>
+            </div>
+        </nav>
+       </header>
+       <div class="form-cont">
+        <h1>Admin Registration</h1>
+        <form method="POST" action="register-admin.php" onsubmit="return checkAdminForm()">    
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Aditya Kumar" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="adityakrcodes@gmail.com" required>
+    
+            <!-- input for passkey -->
+            <label for="passkey">Passkey:</label>
+            <input type="password" name="passkey" id="passkey" placeholder="Passkey" required>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Strong Password" required>
+    
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+    
+            <div class="error">
+                <span id="errorText">Error</span>
+            </div>
+            <input type="submit" value="Register" class="btn">
+            <span class="center">or</span>
+            <a href="/login.html" class="btn">Login</a>
+        </form>
+    </div>
+    <script src="scripts/adminauth.js"></script>
+</body>
+</html>
