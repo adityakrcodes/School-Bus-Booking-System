@@ -22,7 +22,8 @@
             $_SESSION["name"] = $row["name"];
             $_SESSION["email"] = $row["email"];
             $_SESSION["user"] = "admin";
-            include "admin-home.php";
+            include "../home-pages/admin-home.php";
+
         } else {
             include "invalid-pass.html";
         }

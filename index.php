@@ -21,7 +21,7 @@
     }else if (isset($_SESSION["email"]) && $_SESSION["user"] == "driver") {
         include "driver-home.php";
     }else if (isset($_SESSION["email"]) && $_SESSION["user"] == "admin") {
-        include "admin-home.php";
+        include "home-pages/admin-home.php";
     }else{
         include "index.html";
     }

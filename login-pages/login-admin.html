@@ -3,7 +3,7 @@
 <head>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css">
     <title>Admin Login</title>
 </head>
 <body>
@@ -24,8 +24,8 @@
             </div>
             <div class="nav-items" id="nav-items">
                 <a href="/">Home</a>
-                <a href="login.html" class="active">Login</a>
-                <a href="register.html">Register</a>
+                <a href="/login.html" class="active">Login</a>
+                <a href="/register.html">Register</a>
             </div>
             <div class="hamburger">
                 <span id="openHam">&#9776;</span>
@@ -35,16 +35,16 @@
     </header>
     <div class="form-cont">
         <h1>Admin Login</h1>
-        <form action="/login-admin.php" method="POST">
+        <form action="/login-scripts/login-admin.php" method="POST">
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" required>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             <input type="submit" value="Login" class="btn">
             <span class="center">or</span>
-            <a href="register-admin.html" class="btn">Register</a>
+            <a href="/registeration-pages/register-admin.html" class="btn">Register</a>
         </form>
     </div>
-    <script src="scripts/script.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>
