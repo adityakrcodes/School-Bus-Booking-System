@@ -46,17 +46,17 @@
             </div>
             <div class="nav-items" id="nav-items">
                 <a href="/" class="active">Home</a>
+                <a href="./admin-students.php">Students</a>
+                <a href="./admin-drivers.php">Drivers</a>
+                <a href="./admin-routes.php">Routes</a>
+                <a href="./admin-buses.php">Buses</a>
+                <a href="./logout.php">Logout</a>
             </div>
             <div class="hamburger">
                 <span id="openHam">&#9776;</span>
                 <span id="closeHam">&#x2716;</span>
             </div>
         </nav>
-        <div class="profile">
-            <a href="#">
-                <img src="/assets/profile.jpg" alt="" srcset="">
-            </a>
-        </div>
     </header>
     <section id="home-hero">
         <div class="home-hero-container">
@@ -104,7 +104,7 @@
                 </a>
             </div>
             <div class="dashboard-item">
-                <a href="./admin.php">
+                <a href="./admin-routes.php">
                     <div class="dashboard-item-icon">
                         <img src="/assets/route.png" alt="" srcset="">
                     </div>
@@ -129,6 +129,7 @@
             </div>
         </div>
     </section>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>
 

@@ -47,11 +47,9 @@
         <div class="home-hero-container">
             <div class="user-info">
                 <h2>Student Home</h2>
-                <!-- make a user dashboard -->
                 <div class="user-info-container">
                     <div class="user-info-item profile-img-cont">
                         <?php 
-                            // check if the profile image exists in mysql database and in the session
                             if (isset($_SESSION["profile"])) {
                                 $profile = $_SESSION["profile"];
                             }else{
@@ -84,6 +82,7 @@
             </div>
         </div>
     </section>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>
 
