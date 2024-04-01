@@ -17,10 +17,21 @@
 .route-item{
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     width: 300px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 13px;
+    transition: 0.3s ease-in-out;
+}
+
+.route-item:hover{
+    transform: scale(1.02);
+    transform: translateY(-5px);
+}
+
+.bus-image > img{
+    width: 75px;
+
 }
