@@ -126,7 +126,6 @@
                     </div>
                 </div>
             </div>
-\
         </div>
     </section>
     <script src="/scripts/script.js"></script>
