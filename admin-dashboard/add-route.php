@@ -88,6 +88,7 @@
                 </div>
             </div>
             <div class="form-cont" style="margin-top:0;">
+                <h1>Add a Route</h1>
                 <form action="add-route-func.php" method="POST">
                     <label for="bus_number">Bus Number</label>
                     <select name="bus_number" id="bus_number">
