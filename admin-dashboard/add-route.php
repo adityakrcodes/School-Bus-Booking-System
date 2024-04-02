@@ -176,7 +176,7 @@
                     </select>
                     
                     <label for="schedule">Schedule</label>
-                    <input type="time" name="schedule" id="schedule" required>
+                    <input type="date" name="schedule" id="schedule" required>
                     
                     <button type="submit" class="btn">Add Route</button>
                 </form>

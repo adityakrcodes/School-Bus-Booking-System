@@ -8,7 +8,7 @@
 .route-info{
     display: flex;
     justify-content: center;
-    /* flex-direction: row; */
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
     width: 100%;
@@ -17,7 +17,7 @@
 .route-item{
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     gap: 10px;
     width: 300px;
     padding: 10px;

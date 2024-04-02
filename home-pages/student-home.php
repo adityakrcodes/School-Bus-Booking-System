@@ -95,7 +95,7 @@
                 </a>
             </div>
             <div class="dashboard-item">
-                <a href="./view-booking.php">
+                <a href="../booking-system/bookings.php">
                     <div class="dashboard-item-icon">
                         <img src="/assets/view-booking.png" alt="" srcset="">
                     </div>

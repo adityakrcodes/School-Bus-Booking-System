@@ -14,6 +14,11 @@
     $email = $_SESSION["email"];
     $area = $_SESSION["area"];
     $address = $_SESSION["address"];
+
+    $username = "root";
+    $password = "";
+    $dbname = "database";
+    $conn = new mysqli($servername, $username, $password, $dbname);
 ?>
     <header class="nav-header">
         <nav>
@@ -54,14 +59,36 @@
             
             <div class="bus-booking-cont">
                 <div class="user-info">
-                    <h2>Book a bus</h2>
-                </div>
-                <div class="form-cont" style="margin-top: 0;">
-                    <form action="book.php" method="post">
-                        <label for="date">Date</label>
-                        <input type="date" name="date" id="date" required>
-                        <button type="submit" name="submit" class="btn">Book</button>
-                    </form>
+                    <h2>Your Bookings</h2>
+                <div class="user-info-container">
+                    <div class="admin-info-cont">
+                        <?php
+                        $sql = "SELECT * FROM bookings WHERE email='$email'";
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()) {
+                                echo "<div class='admin-info-card'>";
+                                echo "<h2>" . $row["name"] . "</h2>";
+                                // add data name, email, route-id, bus-number, origin, destination, date, time, whenbooked(timestamp)
+                                echo "<p>" . $row["email"] . "</p>";
+                                echo "<p>" . $row["route-id"] . "</p>";
+                                echo "<p>" . $row["bus-number"] . "</p>";
+                                echo "<p>" . $row["origin"] . "</p>";
+                                echo "<p>" . $row["destination"] . "</p>";
+                                echo "<p>" . $row["date"] . "</p>";
+                                echo "<p>" . $row["time"] . "</p>";
+                                echo "<p>" . $row["timestamp"] . "</p>";
+                                echo "<br>";
+                                echo "<a class='btn' href='./admin-edit-student.php?register=" . $row["register"] . " '>Edit</a>";
+                                echo "</div>";
+                            }
+                        } else {
+                            echo "0 results";
+                        }
+
+                        $conn->close();
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,17 +96,17 @@
             <div class="dashboard-item">
                 <a href="../home-pages/student-home.php">
                     <div class="dashboard-item-icon">
-                        <img src="/assets/book-bus.png" alt="" srcset="">
+                        <img src="/assets/student-icon-stroke.png" alt="" srcset="">
                     </div>
                     <p>Your dashboard</p>
                 </a>
             </div>
             <div class="dashboard-item">
-                <a href="bookings.php">
+                <a href="../booking-system/book-bus.php">
                     <div class="dashboard-item-icon">
-                        <img src="/assets/view-booking.png" alt="" srcset="">
+                        <img src="/assets/book-bus.png" alt="" srcset="">
                     </div>
-                    <p>View Booking</p>
+                    <p>Book Bus</p>
                 </a>
             </div>
             <div class="dashboard-item">
