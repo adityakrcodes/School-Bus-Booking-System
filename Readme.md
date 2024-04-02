@@ -29,8 +29,6 @@ This project is a School Bus Booking System designed to facilitate the booking p
 
 ### Users Registration
 ![Users Registration](/screenshots/register-page.png)
-![Users Registration](/screenshots/student-register.png)
-![Users Registration](/screenshots/admin-register.png)
 
 ### User Login
 ![User Login](/screenshots/login-page.png)
