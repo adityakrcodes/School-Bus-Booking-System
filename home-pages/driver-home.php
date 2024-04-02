@@ -100,32 +100,6 @@
                 </div>
             </div>
         </div>
-        <div class="dashboard">
-            <div class="dashboard-item">
-                <a href="./view-bus.php">
-                    <div class="dashboard-item-icon">
-                        <img src="/assets/view-bus.png" alt="" srcset="">
-                    </div>
-                    <p>View Buses</p>
-                </a>
-            </div>
-            <div class="dashboard-item">
-                <a href="./view-booking.php">
-                    <div class="dashboard-item-icon">
-                        <img src="/assets/view-booking.png" alt="" srcset="">
-                    </div>
-                    <p>View Bookings</p>
-                </a>
-            </div>
-            <div class="dashboard-item">
-                <a href="../logout.php">
-                    <div class="dashboard-item-icon">
-                        <img src="/assets/logout.svg" alt="" srcset="" class="logout">
-                    </div>
-                    <p>Logout</p>
-                </a>
-            </div>
-        </div>
     </section>
     <script src="/scripts/script.js"></script>
 </body>
