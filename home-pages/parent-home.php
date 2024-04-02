@@ -9,6 +9,9 @@
 </head>
 <body>
 <?php
+    if (!isset($_SESSION["register"])) {
+        session_start();
+    }
     $parent_name = $_SESSION["parent_name"];
     $parent_email = $_SESSION["email"];
     $register = $_SESSION["register"];
@@ -19,6 +22,9 @@
     $email = $row["email"];
     $area = $row["area"];
     $address = $row["address"];
+    $_SESSION["name"] = $name;
+    $_SESSION["area"] = $area;
+    $_SESSION["address"] = $address;
 
 ?>
     <header class="nav-header">
@@ -115,7 +121,7 @@
         </div>
         <div class="dashboard">
             <div class="dashboard-item">
-                <a href="./book-bus.php">
+                <a href="../booking-system/book-bus.php">
                     <div class="dashboard-item-icon">
                         <img src="/assets/book-bus.png" alt="" srcset="">
                     </div>
@@ -123,15 +129,7 @@
                 </a>
             </div>
             <div class="dashboard-item">
-                <a href="./view-bus.php">
-                    <div class="dashboard-item-icon">
-                        <img src="/assets/view-bus.png" alt="" srcset="">
-                    </div>
-                    <p>View Bus</p>
-                </a>
-            </div>
-            <div class="dashboard-item">
-                <a href="./view-booking.php">
+                <a href="../booking-system/bookings.php">
                     <div class="dashboard-item-icon">
                         <img src="/assets/view-booking.png" alt="" srcset="">
                     </div>
