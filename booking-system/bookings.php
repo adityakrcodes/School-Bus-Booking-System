@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/route.css">
     <title>HOME</title>
 </head>
 <body>
@@ -15,6 +16,7 @@
     $area = $_SESSION["area"];
     $address = $_SESSION["address"];
 
+    $servername = "localhost";
     $username = "root";
     $password = "";
     $dbname = "database";
@@ -62,32 +64,32 @@
                     <h2>Your Bookings</h2>
                 <div class="user-info-container">
                     <div class="admin-info-cont">
+                        <div class="route-info">
                         <?php
-                        $sql = "SELECT * FROM bookings WHERE email='$email'";
-                        $result = $conn->query($sql);
-                        if ($result->num_rows > 0) {
-                            while($row = $result->fetch_assoc()) {
-                                echo "<div class='admin-info-card'>";
-                                echo "<h2>" . $row["name"] . "</h2>";
-                                // add data name, email, route-id, bus-number, origin, destination, date, time, whenbooked(timestamp)
-                                echo "<p>" . $row["email"] . "</p>";
-                                echo "<p>" . $row["route-id"] . "</p>";
-                                echo "<p>" . $row["bus-number"] . "</p>";
-                                echo "<p>" . $row["origin"] . "</p>";
-                                echo "<p>" . $row["destination"] . "</p>";
-                                echo "<p>" . $row["date"] . "</p>";
-                                echo "<p>" . $row["time"] . "</p>";
-                                echo "<p>" . $row["timestamp"] . "</p>";
-                                echo "<br>";
-                                echo "<a class='btn' href='./admin-edit-student.php?register=" . $row["register"] . " '>Edit</a>";
-                                echo "</div>";
-                            }
-                        } else {
-                            echo "0 results";
-                        }
+                            $sql = "SELECT * FROM bookings WHERE email = '$email'";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while($row = $result->fetch_assoc()) {
+                                    echo "<div class='route-item'>";
+                                    echo "<p>Booking ID: " . $row["booking_id"] . "</p>";
+                                    echo "<p>Bus Number: " . $row["bus_number"] . "</p>";
+                                    echo "<p>Route ID: " . $row["route_id"] . "</p>";
+                                    echo "<p>Date: " . $row["date"] . "</p>";
+                                    echo "<p>Time: " . $row["time"] . "</p>";
+                                    echo "<p>Origin: " . $row["origin"] . "</p>";
+                                    echo "<p>Destination: " . $row["destination"] . "</p>";
+                                    echo "<form action='cancel-booking.php' method='post'>";
+                                    echo "<input type='hidden' name='booking_id' value='" . $row["booking_id"] . "'>";
+                                    echo "<button type='submit' class='btn'>Cancel Booking</button>";
+                                    echo "</form>";
+                                    echo "</div>";
 
-                        $conn->close();
+                                }
+                            } else {
+                                echo "<p>No bookings found</p>";
+                            }
                         ?>
+                        </div>
                     </div>
                 </div>
             </div>

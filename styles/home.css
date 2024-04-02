@@ -67,3 +67,25 @@
     width: 100px;
     height: 100px;
 }
+
+.book-place{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.book-place > div{
+    width: 90%;
+    margin: 0 10px;
+}
+
+
+.book-place > div > input, .book-place > div > select, .book-place > div > textarea{
+    padding: 10px;
+    border-radius: 13px;
+    border: 1px solid #ffffff;
+    background-color: #121212;
+    color: #ffffff;
+    width: 100%;
+}
