@@ -91,7 +91,12 @@
                             Driving License: <span><?php echo $driving_licence; ?></span>
                         </p>
                     </div>
-
+                </div>
+                <div class="driver-act-btns">
+                    <?php 
+                        // delete the driver
+                        echo "<a href='../delete-driver.php?email=$email' class='delete btn'>Delete your account</a>";
+                    ?>                        
                 </div>
             </div>
         </div>

@@ -9,7 +9,6 @@
 </head>
 <body>
 <?php
-    // check if session is set and assign session variables to variables
     if (!isset($_SESSION["register"])) {
         session_start();
     }
