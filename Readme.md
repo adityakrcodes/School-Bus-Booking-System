@@ -19,9 +19,33 @@ This project is a School Bus Booking System designed to facilitate the booking p
 
 ## Installation
 1. Clone the repository: `git clone https://github.com/adityakrcodes/School-Bus-Booking-System.git`
-2. Import the provided MySQL database schema.
+2. Import the provided MySQL database schema from the [database.sql](/database.sql) file.
 3. Set up a web server environment (e.g., XAMPP, WAMP) to run PHP scripts.
 4. Start the local server and open the application in a web browser.
+
+## Screenshots
+### Homepage
+![Homepage](/screenshots/home.png)
+
+### Users Registration
+![Users Registration](/screenshots/register-page.png)
+![Users Registration](/screenshots/student-register.png)
+![Users Registration](/screenshots/admin-register.png)
+
+### User Login
+![User Login](/screenshots/login-page.png)
+![User Login](/screenshots/student-login.png)
+![User Login](/screenshots/admin-login.png)
+
+### User Dashboard
+![User Dashboard](/screenshots/student-dashboard.png)
+![Admin Dashboard](/screenshots/admin-dashboard.png)
+
+### Booking Management
+![Booking Management](/screenshots/booking.png)
+![Bookings](/screenshots/bookings.png)
+
+
 
 ## Contributors
 - [Sudais1911](https://github.com/Sudais1911)
