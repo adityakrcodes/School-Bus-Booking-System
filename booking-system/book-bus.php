@@ -146,7 +146,7 @@
         </div>
         <div class="dashboard">
             <div class="dashboard-item">
-                <a href="../home-pages/student-home.php">
+                <a href="/">
                     <div class="dashboard-item-icon">
                         <img src="/assets/book-bus.png" alt="" srcset="">
                     </div>
